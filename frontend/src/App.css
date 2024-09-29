@@ -32,7 +32,35 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.main {
+  background-color: #61dafb;
+    width: 100%;
+    height: 100vh;
+}
+
+.main .center {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.main .label {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.main .submit-button {
+  display: flex;
+  justify-content: end;
 }
