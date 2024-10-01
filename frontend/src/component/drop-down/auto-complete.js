@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useAutocomplete } from '@mui/base/useAutocomplete';
 import { styled } from '@mui/system';
 
-export default function UseAutocomplete({data, onChangeHander, value, label}) {
+export default function UseAutocomplete({data, onChangeHander, value, setValue, label}) {
   const {
     getRootProps,
     getInputLabelProps,
@@ -15,8 +15,9 @@ export default function UseAutocomplete({data, onChangeHander, value, label}) {
     id: 'use-autocomplete-demo',
     options: data,
     getOptionLabel: (option) => option.label,
-    value,
-    onChange: (event, newValue) => onChangeHander(newValue),
+    value: value,  // Controlled value
+    onInputChange: (event, newValue) => onChangeHander(newValue),
+    onChange: (event, newValue) => setValue(newValue),  // This ensures the state persists
   });
 
   return (
@@ -35,6 +36,7 @@ export default function UseAutocomplete({data, onChangeHander, value, label}) {
     </div>
   );
 }
+
 
 const blue = {
   100: '#DAECFF',
