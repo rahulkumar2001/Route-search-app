@@ -1,52 +1,25 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.main {
+html {
   background-color: #61dafb;
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
+  font-size: 16px; /* Default font-size */
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Decrease font size for smaller screens */
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  html {
+    font-size: 10px; /* Further decrease font size for mobile */
+  }
 }
 
 .main .center {
-  width: 50%;
-  height: 50%;
+  width: 31.25rem; /* 50% of 62.5rem (100% of 16px = 16px * 2) */
+  height: 31.25rem; /* 50% of 62.5rem */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,13 +27,153 @@
 }
 
 .main .label {
-  font-size: 2rem;
+  font-size: 2rem; /* 32px */
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* 16px */
   display: block;
+  margin-top: 2rem; /* 32px */
 }
 
 .main .submit-button {
   display: flex;
   justify-content: end;
+}
+
+/* Main Container */
+.route-container {
+  background-color: #f9f9f9;
+  padding: 1.25rem; /* 20px */
+  border-radius: 0.625rem; /* 10px */
+  box-shadow: 0px 0.25rem 0.75rem rgba(0, 0, 0, 0.1); /* 4px 12px */
+  max-width: 37.5rem; /* 600px */
+  margin: 2rem auto;
+}
+
+/* Header Styling */
+.route-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+.route-header div {
+  text-align: center;
+}
+
+.route-time h3,
+.route-fare h3,
+.route-stations h3 {
+  margin: 0;
+  font-size: 1.5rem; /* 24px */
+  color: #333;
+}
+
+.route-time span,
+.route-fare span,
+.route-stations span {
+  font-size: 0.75rem; /* 12px */
+  color: #888;
+  display: block;
+  margin-top: 0.25rem; /* 4px */
+}
+
+/* Route Details */
+.route-details {
+  margin-top: 0.625rem; /* 10px */
+}
+
+/* Line Header (Green Line, Blue Line, etc.) */
+.line h4 {
+  margin: 0 0 0.625rem; /* 10px */
+  font-size: 1rem; /* 16px */
+  color: #333;
+  font-weight: bold;
+}
+/* Color for Each Line */
+.green-line h4 {
+  color: #4CAF50;
+}
+
+.blue-line h4 {
+  color: #2196F3;
+}
+
+.red-line h4 {
+  color: #f44336; /* Red */
+}
+
+.yellow-line h4 {
+  color: #ffeb3b; /* Yellow */
+}
+
+.violet-line h4 {
+  color: #9c27b0; /* Violet */
+}
+
+.pink-line h4 {
+  color: #e91e63; /* Pink */
+}
+
+.magenta-line h4 {
+  color: #c71585; /* Magenta */
+}
+
+.grey-line h4 {
+  color: #9e9e9e; /* Grey */
+}
+
+/* Station List */
+.station-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.station-list li {
+  margin-bottom: 0.5rem; /* 8px */
+  padding: 0.3125rem 0.625rem; /* 5px 10px */
+}
+
+/* Station Styles for Each Line */
+.green-line .station-list li {
+  border-left: 0.1875rem solid #4CAF50; /* Green */
+}
+
+.blue-line .station-list li {
+  border-left: 0.1875rem solid #2196F3; /* Blue */
+}
+
+.red-line .station-list li {
+  border-left: 0.1875rem solid #f44336; /* Red */
+}
+
+.yellow-line .station-list li {
+  border-left: 0.1875rem solid #ffeb3b; /* Yellow */
+}
+
+.violet-line .station-list li {
+  border-left: 0.1875rem solid #9c27b0; /* Violet */
+}
+
+.pink-line .station-list li {
+  border-left: 0.1875rem solid #e91e63; /* Pink */
+}
+
+.magenta-line .station-list li {
+  border-left: 0.1875rem solid #c71585; /* Magenta */
+}
+
+.grey-line .station-list li {
+  border-left: 0.1875rem solid #9e9e9e; /* Grey */
+}
+
+/* Interchange Section */
+.interchange {
+  margin: 0.625rem 0; /* 10px */
+  padding: 0.625rem; /* 10px */
+  background-color: #fff3cd;
+  border-left: 0.1875rem solid #ffc107; /* 3px */
+  font-size: 0.875rem; /* 14px */
+  color: #856404;
+  border-radius: 0.25rem; /* 4px */
 }
